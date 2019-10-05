@@ -45,6 +45,7 @@ module.exports = function(grunt) {
 
         if (result.error) {
           grunt.log.error(result.error);
+          grunt.log.error('Line', result.error.line, 'in', f.src.join(', '));
           return false;
         }
 
